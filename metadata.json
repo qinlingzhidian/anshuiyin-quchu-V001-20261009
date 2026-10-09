@@ -1,0 +1,6 @@
+{
+  "name": "AI Hidden Watermark Remover (AI 暗水印去除工具)",
+  "description": "基于 remove-ai-watermarks 开源库与 88api.ai 接口的批量 AI 图片隐形频域暗水印清除工具",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

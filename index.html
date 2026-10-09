@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Hidden Watermark Remover (AI 暗水印去除工具)</title>
+    <meta name="description" content="基于 remove-ai-watermarks 开源库与 88api.ai 接口的批量 AI 图片隐形频域暗水印清除工具" />
+    <meta property="og:title" content="AI Hidden Watermark Remover (AI 暗水印去除工具)" />
+    <meta property="og:description" content="基于 remove-ai-watermarks 开源库与 88api.ai 接口的批量 AI 图片隐形频域暗水印清除工具" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root">
+      <!-- 当用户在本地电脑直接双击 index.html 时展示的友好引导界面（避免 React 编译前白屏） -->
+      <div id="file-protocol-fallback" style="display:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:680px;margin:60px auto;padding:32px;background:#0f172a;border:1px solid #334155;border-radius:16px;color:#f8fafc;box-shadow:0 20px 40px rgba(0,0,0,0.5);text-align:left;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <div style="width:40px;height:40px;background:linear-gradient(135deg,#06b6d4,#6366f1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;">🛡️</div>
+          <div>
+            <h2 style="margin:0;font-size:18px;font-weight:700;">AI 暗水印与明水印消除系统 · 本地运行指引</h2>
+            <p style="margin:4px 0 0 0;font-size:12px;color:#94a3b8;">检测到您正在直接双击打开源码工程的 index.html</p>
+          </div>
+        </div>
+        
+        <div style="background:#1e293b;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:6px;font-size:13px;line-height:1.6;margin-bottom:20px;color:#cbd5e1;">
+          <strong style="color:#f59e0b;">💡 为什么直接双击 index.html 是空白页面？</strong><br/>
+          当前项目是现代 <strong>React + TypeScript</strong> 源码工程，<code>index.html</code> 中引用的是未经编译打包的 <code>.tsx</code> 源码文件。浏览器无法直接执行未编译的 TypeScript 代码，且浏览器安全策略会拦截本地文件的 ES Module。
+        </div>
+
+        <h3 style="font-size:14px;color:#38bdf8;margin:16px 0 8px 0;">🌟 推荐方式一：免安装单文件离线版（真正双击即用）</h3>
+        <p style="font-size:12px;color:#94a3b8;margin-bottom:12px;">已为您准备好零配置、单文件离线网页，内嵌完整算法与界面，无需 Node.js、无需 npm，任何电脑双击即用：</p>
+        <a href="./ai_watermark_remover_offline.html" style="display:inline-block;padding:12px 24px;background:#06b6d4;color:#000;font-weight:700;font-size:14px;border-radius:8px;text-decoration:none;box-shadow:0 4px 15px rgba(6,182,212,0.4);transition:0.2s;">
+          👉 点击立即打开免安装单文件离线版 (ai_watermark_remover_offline.html)
+        </a>
+
+        <div style="margin-top:24px;border-top:1px solid #334155;padding-top:20px;">
+          <h3 style="font-size:14px;color:#cbd5e1;margin:0 0 8px 0;">💻 方式二：本地完整开发服务模式 (Node.js)</h3>
+          <p style="font-size:12px;color:#94a3b8;margin-bottom:8px;">在项目根目录下打开命令行终端执行：</p>
+          <pre style="background:#020617;padding:12px;border-radius:8px;font-size:12px;color:#34d399;overflow-x:auto;border:1px solid #1e293b;">npm install && npm run dev</pre>
+          <p style="font-size:12px;color:#94a3b8;margin-top:6px;">然后访问终端提示的 <code>http://localhost:3000</code> 即可。</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      // 如果是在本地直接通过 file:// 协议双击打开
+      if (window.location.protocol === 'file:') {
+        // 尝试自动重定向到无需编译的单文件离线版
+        try {
+          window.location.replace('./ai_watermark_remover_offline.html');
+        } catch (e) {
+          // 如果重定向受限，显示友好卡片
+          var fallback = document.getElementById('file-protocol-fallback');
+          if (fallback) fallback.style.display = 'block';
+        }
+        // 如果 300 毫秒后页面未跳转，显现备用指引卡片
+        setTimeout(function() {
+          var fallback = document.getElementById('file-protocol-fallback');
+          if (fallback && !document.querySelector('#root > div:not(#file-protocol-fallback)')) {
+            fallback.style.display = 'block';
+          }
+        }, 300);
+      }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

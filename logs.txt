@@ -1,0 +1,10 @@
+2026-10-08 05:48:07 - [INFO] - 已成功加载开源 remove-ai-watermarks 核心库
+2026-10-08 05:48:08 - [INFO] - [本地 remove-ai-watermarks] 成功：sample_ai_portrait.png | 耗时: 0.47s
+2026-10-08 05:48:08 - [INFO] - [本地 remove-ai-watermarks] 成功：sample_artwork.webp | 耗时: 0.15s
+2026-10-08 05:48:08 - [INFO] - [本地 remove-ai-watermarks] 成功：sample_flower.JPEG | 耗时: 0.06s
+2026-10-08 05:48:08 - [INFO] - [本地 remove-ai-watermarks] 成功：sample_landscape.jpg | 耗时: 0.13s
+2026-10-08 05:48:08 - [INFO] - 批量任务结束 - 成功: 4, 失败: 0, 总耗时: 0.87s
+2026-10-08 05:48:26 - [INFO] - 已成功加载开源 remove-ai-watermarks 核心库
+2026-10-08 05:48:26 - [INFO] - [单张测试成功] 文件: sample_landscape.jpg | 引擎: 本地 remove-ai-watermarks 引擎 | 耗时: 0.48s
+2026-10-08 05:48:32 - [INFO] - 已成功加载开源 remove-ai-watermarks 核心库
+2026-10-08 05:48:32 - [ERROR] - [单张测试失败] 文件: sample_landscape.jpg | 引擎: 88api.ai 在线引擎 | 耗时: 0.00s | 错误: 请在配置区填写 API_KEY_88API 密钥后再启用 88api 在线引擎
